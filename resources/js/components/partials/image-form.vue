@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>selfie project</h1>
+        <p>im the image form</p>
     </div>
 </template>
 
