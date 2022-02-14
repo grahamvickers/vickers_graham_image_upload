@@ -1,26 +1,26 @@
 // require('./bootstrap');
 import Vue from 'vue';
-// import Vuex from 'vuex';
+import Vuex from 'vuex';
 
 import App from './components/App.vue';
 import router from './router';
 
-// Vue.use(Vuex);
+Vue.use(Vuex);
 
-// const store = new Vuex.Store({
-//     state: {
-//         user: null,
-//     },
-//     mutations: {
-//         user (state, UserData) {
-//             state.user = UserData;
-//         }
-//     }
-// });
+const store = new Vuex.Store({
+    state: {
+        upload: null,
+    },
+    mutations: {
+        upload (state, UploadData) {
+            state.upload = UploadData;
+        }
+    }
+});
 
 new Vue ({
     el: '#app',
     router,
-    // store,
+    store,
     components: {App}
 });
