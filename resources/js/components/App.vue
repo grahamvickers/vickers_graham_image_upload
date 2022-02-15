@@ -5,7 +5,7 @@
         </header>
         <section id="landing">
             <h1>Welcome to the Selfie Project</h1>
-            <p>Our mission is to promote find self love to the world, by letting you share your beautiful faces without the worry of opinions</p>
+            <p>Our mission is to promote body inclusivity and self love to the world, by letting you share your beautiful faces without any worry of opinions.</p>
         </section>
 
         <section>
@@ -54,5 +54,9 @@
     }
     #landing{
         text-align: left;
+        margin-bottom: 60px;
+        p{
+            font-size: 14px;
+        }
     }
 </style>

@@ -29,4 +29,5 @@ class ImageGallery extends Model
             ? Storage::url($this->img)
             : null;
     }
+
 }

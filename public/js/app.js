@@ -202,6 +202,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -250,7 +255,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "main {\n  padding: 30px 40px;\n  height: 100vh;\n  background-color: #f2f2f2;\n}\n.hidden {\n  display: none;\n}\n#logo {\n  max-width: 280px;\n  margin-bottom: 60px;\n}\n#landing {\n  text-align: left;\n}", ""]);
+exports.push([module.i, "main {\n  padding: 30px 40px;\n  height: 100vh;\n  background-color: #f2f2f2;\n}\n.hidden {\n  display: none;\n}\n#logo {\n  max-width: 280px;\n  margin-bottom: 60px;\n}\n#landing {\n  text-align: left;\n  margin-bottom: 60px;\n}\n#landing p {\n  font-size: 14px;\n}", ""]);
 
 // exports
 
@@ -269,7 +274,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".image[data-v-413ed4d0] {\n  background-size: cover !important;\n  background-position: center !important;\n  height: 250px;\n  width: 250px;\n  margin: 0 auto;\n}\n#imagesCon[data-v-413ed4d0] {\n  margin-top: 40px;\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n          flex-direction: row;\n  -webkit-box-pack: center;\n          justify-content: center;\n  flex-wrap: wrap;\n}", ""]);
+exports.push([module.i, "#mainCon[data-v-413ed4d0] {\n  padding-bottom: 60px;\n}\n.image[data-v-413ed4d0] {\n  background-size: cover !important;\n  background-position: center !important;\n  height: 250px;\n  width: 250px;\n  margin: 0 auto;\n}\n#imagesCon[data-v-413ed4d0] {\n  margin-top: 40px;\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n          flex-direction: row;\n  -webkit-box-pack: center;\n          justify-content: center;\n  flex-wrap: wrap;\n}\nbutton[data-v-413ed4d0] {\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n  background-color: #ee6055;\n  color: #f2f2f2;\n}\n.form-group[data-v-413ed4d0] {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n          flex-direction: column;\n  margin-top: 20px;\n  margin-bottom: 20px;\n}\n.form-group div[data-v-413ed4d0] {\n  width: 250px;\n}\n.form-group input[data-v-413ed4d0] {\n  background-color: #fff;\n  box-shadow: inset 0 0 5px #2f2f2f50;\n  border: none;\n  border-radius: 5px;\n  max-width: 250px !important;\n  padding: 5px;\n  widows: 250px !important;\n}\n.form-group input[type=file][data-v-413ed4d0]::file-selector-button {\n  background-color: #ee6055;\n  border: none;\n  color: #f2f2f2;\n  border-radius: 5px;\n  padding: 3px 5px;\n}\n.form-group input[type=file][data-v-413ed4d0]::file-selector-button:hover {\n  cursor: pointer;\n}\n@media screen and (min-width: 680px) {\n.form-group[data-v-413ed4d0] {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n            flex-direction: row;\n}\n}", ""]);
 
 // exports
 
@@ -1449,7 +1454,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "Our mission is to promote find self love to the world, by letting you share your beautiful faces without the worry of opinions"
+          "Our mission is to promote body inclusivity and self love to the world, by letting you share your beautiful faces without any worry of opinions."
         )
       ])
     ])
@@ -1515,7 +1520,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { attrs: { id: "mainCon" } }, [
     _c("h3", [
       _vm._v("Let's get started by uploading your most memorable selfie")
     ]),
@@ -1597,13 +1602,20 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "name" } }, [_vm._v("Your Name *")]),
+      _c("div", [
+        _c("label", { attrs: { for: "name" } }, [_vm._v("Your Name *")]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", { attrs: { type: "text", name: "name", id: "name" } }),
+        _c("br")
+      ]),
       _vm._v(" "),
-      _c("input", { attrs: { type: "text", name: "name", id: "name" } }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "avatar" } }, [_vm._v("Your Selfie *")]),
-      _vm._v(" "),
-      _c("input", { attrs: { type: "file", name: "avatar", id: "avatar" } })
+      _c("div", [
+        _c("label", { attrs: { for: "image" } }, [_vm._v("Your Selfie *")]),
+        _c("br"),
+        _vm._v(" "),
+        _c("input", { attrs: { type: "file", name: "image", id: "image" } })
+      ])
     ])
   }
 ]
@@ -18167,9 +18179,6 @@ __webpack_require__.r(__webpack_exports__);
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__["default"]);
 var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
-  state: {
-    image: null
-  },
   mutations: {
     image: function image(state, ImageData) {
       state.image = ImageData;

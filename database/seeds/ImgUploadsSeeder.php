@@ -15,32 +15,28 @@ class ImgUploadsSeeder extends Seeder
     protected $images = [
         [
             'name' => 'graham',
-            'img' => 'graham.jpg'
+            'img' => 'graham.png'
         ],
         [
             'name' => 'graham',
-            'img' => 'graham1.jpg'
+            'img' => 'graham1.png'
         ],
         [
             'name' => 'graham',
-            'img' => 'graham2.jpg'
+            'img' => 'graham2.png'
         ],
         [
             'name' => 'graham',
-            'img' => 'graham3.jpg'
+            'img' => 'graham3.png'
         ],
         [
             'name' => 'graham',
-            'img' => 'graham4.jpg'
+            'img' => 'graham4.png'
         ],
         [
             'name' => 'graham',
-            'img' => 'graham5.jpg'
-        ],
-        [
-            'name' => 'graham',
-            'img' => 'graham6.jpg'
-        ],
+            'img' => 'graham5.png'
+        ]
     ];
 
 
