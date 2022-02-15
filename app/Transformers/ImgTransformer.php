@@ -15,7 +15,7 @@ class ImgTransformer extends Transformer
         return [
             'id' => $upload->id,
             'name' => $upload->name,
-            'img' => $upload->imgUri,
+            'img' => $upload->img,
         ];
     }
 }

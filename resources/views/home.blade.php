@@ -2,6 +2,6 @@
 
 @section('content')
 <div id="app">
-    <app upload="{{ json_encode($upload ?? '')}}"></app>
+    <app :image="{{ json_encode($image ?? '')}}"></app>
 </div>
 @endsection

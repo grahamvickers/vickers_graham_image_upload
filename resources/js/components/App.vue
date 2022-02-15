@@ -9,9 +9,12 @@
         </section>
 
         <section>
-            <h2>Image Gallery</h2>
             <image-form />
         </section>
+
+        <footer>
+            <p>DESIGNED AND DEVELOPED BY GRAHAM VICKERS&copy;</p>
+        </footer>
     </div>
 </template>
 
@@ -21,14 +24,14 @@
     export default {
         name: 'app',
         props: {
-            upload: {
+            image: {
                 type: Object,
                 required: true
             }
         },
         mounted() {
-            console.log(this.upload);
-            //this.$store.commit('upload', this.upload);
+            //console.log(this.upload);
+            this.$store.commit('image', this.image);
         },
         components: {
             ImageForm
@@ -41,6 +44,9 @@
         padding: 30px 40px;
         height: 100vh;
         background-color: #f2f2f2;
+    }
+    .hidden{
+        display: none;
     }
     #logo{
         max-width: 280px; 
