@@ -2,55 +2,46 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Transformers\ImgTransformer;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Storage;
+use App\Transformers\ImgTransformer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Image;
 
-class UploadController extends Controller
+
+class ImageController extends Controller
 {
-
-    
     /**
-     * Return all instances of the listing model
+     * Create a new controller instance.
      *
-     * @return Illuminate\Http\JsonResponse
-     *
+     * @param  ImageRepository  $image
+     * @return void
      */
-
-    // public function index(Request $request){
-    //     $images = ImageGallery::all()->map->only(['name', 'imgUri']);
-
-    //     return response()->json($images, 200);
-    // }
-
-
-
+    public function __construct(ImageRepository $image)
+    {
+        $this->image = $image;
+    }
 
     /**
-     * Upload image
-     * 
-     * @param Request $request
-     * @param ImgTransformer $imgTransformer
-     * @param $id
-     * @return \Illuminate\Http\JsonResponse
+     * Store a new image from the upload form
+     *
+     * @param  Request  $request
+     * @return Response
      */
-    public function create(
-        Request $request,
-        ImgTransformer $imgTransformer,
-        $id
-    ) {
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'img' => 'required|image|max:50000000'
+        ]);
 
-        if ($request->has('upload_image')) {
-        $imageName = Storage::putFile('public/images', $request->image);
+        $image = Storage::putFile('public', $request->img);
 
-        $image->images = $imageName;
-        $image->save();
-        }
+        Upload::create([
+            'name' => $request->name,
+            'img' => $imgName
+        ]);
 
-        $image->fresh();
-
-        return response()->json($imgTransformer->transform($image));
+        return view('/images)
     }
 }

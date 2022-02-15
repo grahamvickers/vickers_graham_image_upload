@@ -8,9 +8,6 @@ import router from './router';
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
-    state: {
-        image: null,
-    },
     mutations: {
         image (state, ImageData) {
             state.image = ImageData;

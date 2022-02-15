@@ -17,7 +17,7 @@ class HomeController extends Controller
     // ImgTransformer $imgTransformer
     public function index()
     {   
-        // $image = $imgTransformer-> transform(image()); 
+        //$image = $imgTransformer-> transform(function); 
 
         // , compact('image')
         return view('home');
