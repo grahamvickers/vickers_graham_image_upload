@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Auth;
 use App\Transformers\ImgTransformer;
 
 class HomeController extends Controller
@@ -17,9 +17,9 @@ class HomeController extends Controller
     // ImgTransformer $imgTransformer
     public function index()
     {   
-        // $upload = $imgTransformer-> transform(upload()); 
+        // $image = $imgTransformer-> transform(image()); 
 
-        // , compact('upload')
+        // , compact('image')
         return view('home');
     }
 }

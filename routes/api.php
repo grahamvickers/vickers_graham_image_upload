@@ -18,4 +18,4 @@ Route::middleware('auth:api')->get('/image', function (Request $request) {
     return $request->image();
 });
 
-route::patch('images/{image}', 'Api\ImageController@update')->name('images.update');
+route::patch('images/{image}', 'Api\ImageController@create')->name('images.create');

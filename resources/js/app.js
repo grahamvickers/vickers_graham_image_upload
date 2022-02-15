@@ -9,11 +9,11 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
     state: {
-        upload: null,
+        image: null,
     },
     mutations: {
-        upload (state, UploadData) {
-            state.upload = UploadData;
+        image (state, ImageData) {
+            state.image = ImageData;
         }
     }
 });

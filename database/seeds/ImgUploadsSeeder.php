@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\ImageGallery;
+use App\Image;
 
 
 class ImgUploadsSeeder extends Seeder
